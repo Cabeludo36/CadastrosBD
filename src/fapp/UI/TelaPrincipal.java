@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package fapp;
+package fapp.UI;
 
 /**
  *
@@ -86,13 +86,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         CadastroCliente tela = new CadastroCliente();
         tela.setVisible(true);
-        dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         CadastroFuncionario tela = new CadastroFuncionario();
         tela.setVisible(true);
-        dispose();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
