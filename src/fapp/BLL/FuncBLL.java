@@ -11,7 +11,8 @@ import fapp.DTO.*;
  * @author brepi
  */
 public class FuncBLL {
-    public int excluirFunc(){
-        return 1;
+    public boolean addFunc(String nome, String cpf, String endereco, String contato, String cargo, String hs){
+        FuncDAL add = new FuncDAL();
+        return add.addFunc(nome, cpf, endereco, contato, cargo, hs);
     }
 }
