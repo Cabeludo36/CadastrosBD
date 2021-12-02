@@ -26,8 +26,8 @@ public class ClienteBLL {
         }
         return clientes;
     }
-    public boolean addCliente(String nome, String cpf, String contato, String cidade, String endereco){
+    public boolean addCliente(ClienteDTO cliente){
         ClienteDAL add = new ClienteDAL();
-        return add.addCliente(nome, cpf, contato, cidade, endereco);
+        return add.addCliente(cliente);
     }
 }

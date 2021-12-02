@@ -30,13 +30,13 @@ public class FuncDAL {
         }
         return con;
     }
-    public boolean addFunc(String nome, String cpf, String endereco, String contato, String cargo, String hs){
+    public boolean addFunc(FuncDTO func){
         Statement st = null;
         Connection con = criaCon();
         try {
             st = con.createStatement();
             st.executeUpdate("INSERT INTO CADASTROFUNC(NOMEFUNC,CPFFUNC,ENDERECOFUNC,CONTATOFUNC,CARGOFUNC,HORASEMANA)"+ 
-                    "VALUES('"+nome+"','"+cpf+"','"+endereco+"','"+contato+"',"+cargo+","+hs+");");
+                    "VALUES('"+func.nomeFunc+"','"+func.CPFFunc+"','"+func.EnderecoFunc+"','"+func.ContatoFunc+"',"+func.CargoFunc+","+func.HSFunc+");");
                 return true;
         } catch (SQLException ex) {
                 Logger.getLogger(ClienteDAL.class.getName()).log(Level.SEVERE, null, ex);

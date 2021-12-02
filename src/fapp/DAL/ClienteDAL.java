@@ -77,13 +77,13 @@ public class ClienteDAL {
             return clientes;
     }
     
-    public boolean addCliente(String nome, String cpf, String contato, String cidade, String endereco){
+    public boolean addCliente(ClienteDTO cliente){
         Statement st = null;
         Connection con = criaCon();
         try {
             st = con.createStatement();
             st.executeUpdate("INSERT INTO CADASTROCLIENTE(NOMECLIENTE,CPFCLIENTE,CONTATOCLIENTE,CIDADECLIENTE,ENDERECOCLIENTE)"+ 
-                    "VALUES('"+nome+"','"+cpf+"','"+contato+"','"+cidade+"','"+endereco+"');");
+                    "VALUES('"+cliente.nomeCliente+"','"+cliente.CPFCliente+"','"+cliente.ContatoCliente+"','"+cliente.CidadeCliente+"','"+cliente.EnderecoCliente+"');");
             return true;
         } catch (SQLException ex) {
             Logger.getLogger(ClienteDAL.class.getName()).log(Level.SEVERE, null, ex);

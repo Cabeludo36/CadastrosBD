@@ -15,5 +15,4 @@ public class FuncDTO {
     public String ContatoFunc;
     public String CargoFunc;
     public String HSFunc;
-    public String ESFunc;
 }

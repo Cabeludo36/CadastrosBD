@@ -272,7 +272,15 @@ public class CadastroCliente extends javax.swing.JFrame {
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         ClienteBLL add = new ClienteBLL();
-        if(add.addCliente(txtNome.getText(), txtCPF.getText(), txtContato.getText(), txtCidade.getText(), txtEndereco.getText()))
+        ClienteDTO cliente = new ClienteDTO();
+        
+        cliente.nomeCliente = txtNome.getText();
+        cliente.CPFCliente = txtCPF.getText();
+        cliente.ContatoCliente = txtContato.getText();
+        cliente.CidadeCliente = txtCidade.getText();
+        cliente.EnderecoCliente = txtEndereco.getText();
+
+        if(add.addCliente(cliente))
             System.out.print("Foi");
         else
             System.out.print("Foi não");

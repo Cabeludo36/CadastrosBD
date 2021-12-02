@@ -213,7 +213,16 @@ public class CadastroFuncionario extends javax.swing.JFrame {
 
     private void bntSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntSalvarActionPerformed
         FuncBLL add = new FuncBLL();
-        if(add.addFunc(txtNome.getText(), txtCPF.getText(), txtEndereco.getText(), txtContato.getText(), txtCargo.getText(), txtHSemanais.getText()))
+        FuncDTO func = new func();
+        
+        func.nomeFunc = txtNome.getText();
+        func.CPFFunc = txtCPF.getText();
+        func.EnderecoFunc = txtContato.getText();
+        func.ContatoFunc = txtCidade.getText();
+        func.CargoFunc = txtEndereco.getText();
+        func.HSFunc = txtHSemanais.getText();
+
+        if(add.addFunc(func))
             System.out.print("Foi");
         else
             System.out.print("Foi não");
